@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title={titleTextPage}>
+        <div class="slds-grid slds-gutters">
+            <template for:each={listBlockSetting} for:item="blocksetting">
+                <div class="slds-col" key={blocksetting.name} id={blocksetting.name} style="width: 80%">
+                    <template if:true={blocksetting.listOptionsCombobox.length}>                    
+                        <lightning-combobox
+                            name={blocksetting.nameCombobox}
+                            label={blocksetting.labelCombobox}
+                            value={blocksetting.selectedValueCombobox}
+                            placeholder={textPlaceholderCombobox}
+                            options={blocksetting.listOptionsCombobox}
+                            onchange={handleChangeComboboxSetting}
+                            dropdown-alignment='auto'
+                            >
+                        </lightning-combobox>
+                    </template>
+                    <template if:true={blocksetting.listOptionsCheckbox.length}>
+                        <template for:each={blocksetting.listOptionsCheckbox} for:item="optionCheckbox">
+                            <div key={optionCheckbox.value} id={optionCheckbox.value}>
+                                <lightning-input data-checkbox-block={blocksetting.nameCheckbox} data-value-combobox-block={blocksetting.selectedValueCombobox} 
+                                    type="checkbox"
+                                    name={optionCheckbox.value} 
+                                    label={optionCheckbox.label}                                 
+                                    checked={optionCheckbox.checked}
+                                    disabled={optionCheckbox.disabled}
+                                    onchange={handleChangesCheckboxSetting}>
+                                </lightning-input>
+                            </div>
+                        </template>
+                    </template>
+                </div>            
+            </template>                
+        </div>
+    </lightning-card>
+</template>

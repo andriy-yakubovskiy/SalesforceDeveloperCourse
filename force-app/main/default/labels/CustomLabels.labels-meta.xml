@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Access_denied</fullName>
+        <categories>Phrase</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Access denied</shortDescription>
+        <value>Access denied</value>
+    </labels>
+    <labels>
+        <fullName>Cancel</fullName>
+        <categories>Button / link name</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Cancel</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>Candidate</fullName>
+        <categories>Object name</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Candidate</shortDescription>
+        <value>Candidate</value>
+    </labels>
+    <labels>
+        <fullName>Candidates</fullName>
+        <categories>Object name</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Candidates</shortDescription>
+        <value>Candidates</value>
+    </labels>
+    <labels>
+        <fullName>Close_date</fullName>
+        <categories>Field name</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Close date</shortDescription>
+        <value>Close date</value>
+    </labels>
+    <labels>
+        <fullName>Country</fullName>
+        <categories>Field name</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Country</shortDescription>
+        <value>Country</value>
+    </labels>
+    <labels>
+        <fullName>Data</fullName>
+        <categories>Words</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Data</shortDescription>
+        <value>Data</value>
+    </labels>
+    <labels>
+        <fullName>Education</fullName>
+        <categories>Field name</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Education</shortDescription>
+        <value>Education</value>
+    </labels>
+    <labels>
+        <fullName>Error</fullName>
+        <categories>Words</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error</shortDescription>
+        <value>Error</value>
+    </labels>
+    <labels>
+        <fullName>First</fullName>
+        <categories>Button / link name</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>First</shortDescription>
+        <value>First</value>
+    </labels>
+    <labels>
+        <fullName>Global_rating_review</fullName>
+        <categories>Field name</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Global rating review</shortDescription>
+        <value>Global rating review</value>
+    </labels>
+    <labels>
+        <fullName>Job_application</fullName>
+        <categories>Object name</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Job application</shortDescription>
+        <value>Job application</value>
+    </labels>
+    <labels>
+        <fullName>Job_applications</fullName>
+        <categories>Object name</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Job applications</shortDescription>
+        <value>Job applications</value>
+    </labels>
+    <labels>
+        <fullName>Last</fullName>
+        <categories>Button / link name</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Last</shortDescription>
+        <value>Last</value>
+    </labels>
+    <labels>
+        <fullName>Link</fullName>
+        <categories>Words</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Link</shortDescription>
+        <value>Link</value>
+    </labels>
+    <labels>
+        <fullName>List_data_is_empty</fullName>
+        <categories>Phrase</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>List data is empty</shortDescription>
+        <value>The list of data is empty.</value>
+    </labels>
+    <labels>
+        <fullName>Name</fullName>
+        <categories>Field name</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Name</shortDescription>
+        <value>Name</value>
+    </labels>
+    <labels>
+        <fullName>New_Candidate_JobApplication</fullName>
+        <categories>Phrase</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>New Candidate and JobApp</shortDescription>
+        <value>New Candidate (and Job application)</value>
+    </labels>
+    <labels>
+        <fullName>Next</fullName>
+        <categories>Button / link name</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Next</shortDescription>
+        <value>Next</value>
+    </labels>
+    <labels>
+        <fullName>Open_date</fullName>
+        <categories>Field name</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Open date</shortDescription>
+        <value>Open date</value>
+    </labels>
+    <labels>
+        <fullName>Please</fullName>
+        <categories>Words</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Please</shortDescription>
+        <value>Please</value>
+    </labels>
+    <labels>
+        <fullName>Position</fullName>
+        <categories>Object name</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Position</shortDescription>
+        <value>Position</value>
+    </labels>
+    <labels>
+        <fullName>Positions</fullName>
+        <categories>Object name</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Positions</shortDescription>
+        <value>Positions</value>
+    </labels>
+    <labels>
+        <fullName>Previous</fullName>
+        <categories>Button / link name</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Previous</shortDescription>
+        <value>Previous</value>
+    </labels>
+    <labels>
+        <fullName>Problem</fullName>
+        <categories>Words</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Problem</shortDescription>
+        <value>Problem</value>
+    </labels>
+    <labels>
+        <fullName>Record</fullName>
+        <categories>Words</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Record</shortDescription>
+        <value>Record</value>
+    </labels>
+    <labels>
+        <fullName>Records</fullName>
+        <categories>Words</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Records</shortDescription>
+        <value>Records</value>
+    </labels>
+    <labels>
+        <fullName>Save</fullName>
+        <categories>Button / link name</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Save</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>Search</fullName>
+        <categories>Button / link name</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Search</shortDescription>
+        <value>Search</value>
+    </labels>
+    <labels>
+        <fullName>Select</fullName>
+        <categories>Button / link name</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select</shortDescription>
+        <value>Select</value>
+    </labels>
+    <labels>
+        <fullName>Status</fullName>
+        <categories>Field name</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Status</shortDescription>
+        <value>Status</value>
+    </labels>
+    <labels>
+        <fullName>The</fullName>
+        <categories>Words</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>The</shortDescription>
+        <value>The</value>
+    </labels>
+    <labels>
+        <fullName>Updata</fullName>
+        <categories>Words</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Updata</shortDescription>
+        <value>Updata</value>
+    </labels>
+    <labels>
+        <fullName>Want_to_continue</fullName>
+        <categories>Phrase</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Want to continue</shortDescription>
+        <value>Are you sure, you want to continue?</value>
+    </labels>
+    <labels>
+        <fullName>confirm</fullName>
+        <categories>Words</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>confirm</shortDescription>
+        <value>confirm</value>
+    </labels>
+    <labels>
+        <fullName>failed</fullName>
+        <categories>Words</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>failed</shortDescription>
+        <value>failed</value>
+    </labels>
+    <labels>
+        <fullName>field</fullName>
+        <categories>Words</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>field</shortDescription>
+        <value>field</value>
+    </labels>
+    <labels>
+        <fullName>filter</fullName>
+        <categories>Words</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>filter</shortDescription>
+        <value>filter</value>
+    </labels>
+    <labels>
+        <fullName>for</fullName>
+        <categories>Words</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>for</shortDescription>
+        <value>for</value>
+    </labels>
+    <labels>
+        <fullName>from</fullName>
+        <categories>Words</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>from</shortDescription>
+        <value>from</value>
+    </labels>
+    <labels>
+        <fullName>get</fullName>
+        <categories>Words</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>get</shortDescription>
+        <value>get</value>
+    </labels>
+    <labels>
+        <fullName>of</fullName>
+        <categories>Words</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>of</shortDescription>
+        <value>of</value>
+    </labels>
+    <labels>
+        <fullName>to</fullName>
+        <categories>Words</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>to</shortDescription>
+        <value>to</value>
+    </labels>
+</CustomLabels>

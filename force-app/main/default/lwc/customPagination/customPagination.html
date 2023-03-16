@@ -1,0 +1,64 @@
+<template>
+    <div class="slds-var-p-top_small slds-align_absolute-center">
+        <lightning-button
+            name="PreviousPage"
+            label={labelGlobal.PREVIOUS_LABEL}
+            title=""
+            icon-name="utility:back"
+            onclick={handleButtonPreviousPage}
+            class="slds-var-m-left_x-small">
+        </lightning-button>
+        &nbsp;&nbsp;...
+        <lightning-button
+            name="FirstPage"
+            label={labelGlobal.FIRST_LABEL}
+            title=""
+            onclick={handleButtonFirstPage}
+            class="slds-var-m-left_x-small">
+        </lightning-button>
+        &nbsp;&nbsp;...
+        <lightning-button 
+            name="CurrentPage" 
+            label={currentPage} 
+            title="" 
+            onclick={handleButtonGoToCurrentPage} 
+            class="slds-var-m-left_x-small">
+        </lightning-button>
+        <template if:true={yesButtonFirstAfterCurrentPage}>
+            <lightning-button 
+                name="FirstAfterCurrentPage" 
+                label={firstAfterCurrentPage} 
+                title="" 
+                onclick={handleButtonGoToFirstAfterCurrentPage} 
+                class="slds-var-m-left_x-small">
+            </lightning-button>
+        </template>
+        <template if:true={yesButtonSecondAfterCurrentPage}>
+            <lightning-button 
+                name="SecondAfterCurrentPage" 
+                label={secondAfterCurrentPage} 
+                title="" 
+                onclick={handleButtonGoToSecondAfterCurrentPage} 
+                class="slds-var-m-left_x-small">
+            </lightning-button>
+        </template>
+        &nbsp;&nbsp;...
+        <lightning-button 
+            name="LastPage" 
+            label={labelGlobal.LAST_LABEL} 
+            title="" 
+            onclick={handleButtonLastPage} 
+            class="slds-var-m-left_x-small">
+        </lightning-button>
+        &nbsp;&nbsp;...
+        <lightning-button 
+            name="NextPage" 
+            label={labelGlobal.NEXT_LABEL} 
+            title=""
+            icon-name="utility:forward" 
+            onclick={handleButtonNextPage} 
+            class="slds-var-m-left_x-small">
+        </lightning-button>
+        &nbsp;&nbsp;{startingRecord} {labelGlobal.TO_LABEL} {endingRecord} {labelGlobal.OF_LABEL} {totalRecordsCount}&nbsp;<p style="text-transform:lowercase">{labelGlobal.RECORDS_LABEL}</p>&nbsp;&nbsp;        
+    </div>
+</template>

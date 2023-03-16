@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Settings of show fields for Interviewer</label>
+    <protected>false</protected>
+    <values>
+        <field>FieldSet_for_JobApp_popup__c</field>
+        <value xsi:type="xsd:string">show_in_candidate_page</value>
+    </values>
+    <values>
+        <field>FieldSet_for_candidate_card__c</field>
+        <value xsi:type="xsd:string">show_in_card</value>
+    </values>
+    <values>
+        <field>FieldSet_for_candidate_popup__c</field>
+        <value xsi:type="xsd:string">show_in_modal_popup</value>
+    </values>
+    <values>
+        <field>Fields_in_FieldSet_for_JobApp_popup__c</field>
+        <value xsi:type="xsd:string">Position__c;</value>
+    </values>
+    <values>
+        <field>Fields_in_FieldSet_for_candidate_card__c</field>
+        <value xsi:type="xsd:string">Country__c;Education__c;Add_Education__c;</value>
+    </values>
+    <values>
+        <field>Fields_in_FieldSet_for_candidate_popup__c</field>
+        <value xsi:type="xsd:string">Email__c;Messenger__c;</value>
+    </values>
+    <values>
+        <field>Setting_for_user_type__c</field>
+        <value xsi:type="xsd:string">Interviewer</value>
+    </values>
+</CustomMetadata>

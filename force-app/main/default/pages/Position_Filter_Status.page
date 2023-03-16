@@ -1,0 +1,33 @@
+<apex:page Controller="PositionFunctionExpression">
+    <apex:form >
+        <apex:pageBlock title="{!$Label.Positions} (+{!$Label.filter})" mode="edit" id="positions_list_block">
+            <apex:pageMessages ></apex:pageMessages>   
+            <apex:pageBlockSection columns="1">
+                <apex:inputField label="{!$Label.Status} {!$Label.filter}" value="{!oPos.Status__c}" />
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons location="both">
+                <apex:commandButton value="{!$Label.Search}" action="{!doSearch}" rerender="resultsBlockTable" />
+                <apex:commandButton value="{!$Label.Save}" onclick="if (!confirm('Do you want to proceed?')) return false;" action="{!save}"
+                    rerender="positions_list_block" />
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection columns="1" id="resultsBlockTable">
+                <apex:pageBlockTable value="{!Positions}" var="p">
+                    <apex:column headerValue="{!$Label.Name}/{!$Label.Link}">
+                        <apex:outputLink value="/{!p.id}" target="_blank">{!p.Name}</apex:outputLink>
+                    </apex:column>
+                    <apex:column headerValue="{!$Label.Status}">
+                        <apex:inputField value="{!p.Status__c}" />
+                    </apex:column>
+                    <apex:column headerValue="{!$Label.Open_date}" value="{!p.Open_Date__c}" />
+                    <apex:column headerValue="{!$Label.Close_date}"  value="{!p.Close_Date__c}" />
+                </apex:pageBlockTable>
+                <apex:panelGrid columns="4">
+                    <apex:commandLink action="{!first}">{!$Label.First}</apex:commandlink>
+                    <apex:commandLink action="{!previous}" rendered="{!hasPrevious}">{!$Label.Previous}</apex:commandlink>
+                    <apex:commandLink action="{!next}" rendered="{!hasNext}">{!$Label.Next}</apex:commandlink>
+                    <apex:commandLink action="{!last}">{!$Label.Last}</apex:commandlink>
+                </apex:panelGrid>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

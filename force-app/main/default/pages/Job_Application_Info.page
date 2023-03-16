@@ -1,0 +1,20 @@
+<apex:page standardController="Job_Application__c" recordSetVar="JobApplications">
+    <apex:form >
+        <apex:pageBlock title="{!$Label.Job_applications}" mode="edit">
+            <apex:pageBlockTable value="{!JobApplications}" var="ja">
+                <apex:column headerValue="{!$Label.Name}/{!$Label.Link}"><apex:outputLink value="/{!ja.id}" target="_blank">{!ja.Name}</apex:outputLink> </apex:column>  
+                <apex:column headerValue="{!$Label.Global_rating_review}"><apex:outputLink value="/{!ja.Global_rating_review__c}"/>{!ja.Global_rating_review__c}</apex:column>
+                <apex:column headerValue="{!$Label.Candidate}" value="{!ja.Candidate__c}"/>
+                <apex:column headerValue="{!$Label.Candidate} ({!LOWER($Label.Education)})">  <apex:outputLink value="/{!ja.Candidate__r.Education__c}"/>{!ja.Candidate__r.Education__c}</apex:column>
+                <apex:column headerValue="{!$Label.Candidate} ({!LOWER($Label.Country)})">  <apex:outputLink value="/{!ja.Candidate__r.Country__c}"/>{!ja.Candidate__r.Country__c}</apex:column>
+                <apex:column headerValue="{!$Label.Position}" value="{!ja.Position__c}"/>
+                <apex:column headerValue="{!$Label.Position} ({!LOWER($Label.Open_date)})">  <apex:outputLink value="/{!ja.Position__r.Open_Date__c}"/>{!ja.Position__r.Open_Date__c}</apex:column>
+                <apex:column headerValue="{!$Label.Position} ({!LOWER($Label.Status)})">  <apex:outputLink value="/{!ja.Position__r.Status__c}"/>{!ja.Position__r.Status__c}</apex:column>                
+            </apex:pageBlockTable>
+            <apex:panelGrid columns="2">
+                <apex:commandLink action="{!previous}">{!$Label.Previous}</apex:commandlink>
+                <apex:commandLink action="{!next}">{!$Label.Next}</apex:commandlink>
+            </apex:panelGrid>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

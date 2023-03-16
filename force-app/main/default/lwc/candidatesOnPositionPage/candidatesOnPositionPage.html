@@ -1,0 +1,109 @@
+<template>
+    <div class={flexipageRegionWidth}>
+      <article class="slds-card">
+        <div class="slds-card__body">
+          <template if:true={isAdmin}>  
+            <div class="slds-grid slds-grid_vertical slds-col slds-var-m-top_x-small" style="border:none; float:right; margin-right:1em;">            
+              <c-custom-modal-popup-page
+                  variant-open-button ='brand'
+                  label-open-button ={labelOpenButtonModalPopupPageSettings}
+                  params-page ={parametersModalPopupPageSettings}
+                  onsubmitdetailsmodalpage ={handleChangedParametersPageSettings}
+                >
+                </c-custom-modal-popup-page>
+            </div>
+          </template>        
+          
+          <template if:true={emptyCandidatesList}>
+              <p>&nbsp;There are NO candidates for this position.</p>
+          </template>
+          <template if:true={loadingCandidatesList}>
+            <lightning-spinner alternative-text="Loading" variant="brand" size="large"></lightning-spinner>
+            <p>&nbsp;.........</p>
+          </template>
+          <template if:true={candidates.length}>
+            <div class="slds-grid slds-gutters_x-small">      
+                <template for:each={candidates} for:item="candidate">
+                  <div key={candidate.id} id={candidate.id} class={classNameSizeCard} data-card-name="candidateCard">
+    
+                    <div style="margin:3px;">
+                      <article class="slds-card slds-card_boundary">
+                        
+                        <div class="slds-card__header">
+                          <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                            <div class="slds-media__figure">
+                              <span class="slds-icon_container slds-icon-standard-user" title="Candidate">
+                                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                      <use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#user"></use>
+                                  </svg>
+                                  <span class="slds-assistive-text">candidate</span>
+                              </span>
+                            </div>
+                            <div class="slds-media__body">
+                              <h2 class="slds-card__header-title">
+                                  <a href={candidate.link} class="slds-card__header-link slds-truncate" title="Candidate">
+                                      <u>{candidate.name}</u>
+                                  </a>
+                              </h2>
+                            </div>
+                          </header>
+                        </div>
+                        
+                        <div class="slds-card__body slds-card__body_inner">
+                          <template for:each={candidate.fields} for:item="field">
+                            <div key={field.name}>
+                              <template if:true={field.access}>
+                                <span>{field.lable}: {field.value}</span>
+                              </template>
+                              <template if:false={field.access}>
+                                <span style="color:grey">{field.lable}: -access denied- </span>
+                              </template>
+                            </div>
+                          </template>
+                        </div>
+                        
+                        <footer class="slds-card__footer">
+                          <!-- <a class="slds-card__footer-action" href="#" onclick={handleModalOpen} data-id-object-owner={candidate.id}>View
+                            <span class="slds-assistive-text">candidate</span>
+                          </a> -->
+                          <c-custom-modal-popup-page 
+                            variant-open-button ='base'
+                            label-open-button ={labelOpenButtonModalPopupPageInform}
+                            params-page ={parametersModalPopupPageInform}
+                            id-object-owner ={candidate.id}
+                            >
+                          </c-custom-modal-popup-page>
+                        </footer>
+                      </article>
+                    </div>
+    
+                  </div>
+                </template>
+            </div>
+    
+            <!-- <div class="slds-var-m-around_medium">
+              <c-custom-pagination
+                  number-of-records   ={numberOfRecordsInPage}
+                  records-count       ={totalRecords}
+                  first-starting-record={startRecord}             
+                  onnewstartrecord    ={handleSetNewStartRecord}>
+              </c-custom-pagination>
+            </div> -->
+          </template>
+
+        </div>
+      </article>
+
+      <lightning-card>
+          <div class="slds-var-m-around_medium">
+              <c-custom-pagination
+                  number-of-records   ={numberOfRecordsInPage}
+                  records-count       ={totalRecords}
+                  first-starting-record={startRecord}             
+                  onnewstartrecord  ={handleSetNewStartRecord}>
+              </c-custom-pagination>
+          </div>        
+      </lightning-card>
+
+    </div>  
+  </template>

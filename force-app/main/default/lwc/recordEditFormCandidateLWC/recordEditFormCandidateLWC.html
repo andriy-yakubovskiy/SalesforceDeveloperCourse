@@ -1,0 +1,71 @@
+<template>
+
+    <!--Modal/Popup-->
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">        
+        <div class="slds-modal__container">            
+            <!--header-->
+            <header class="slds-modal__header">
+                <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={handleCancelModal}>
+                    <lightning-icon icon-name="utility:close"
+                        alternative-text="close"
+                        variant="inverse"
+                        size="small" >
+                    </lightning-icon>
+                    <span class="slds-assistive-text">Close</span>
+                </button>
+                <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">{labelGlobal.NEW_CANDIDATE_JOB_APPLICATION}</h2>
+            </header>
+            <!--body-->
+            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-2">
+                <template if:true={showSpinner}>
+                    <lightning-spinner alternative-text="Loading" variant="brand" size="large"></lightning-spinner>
+                </template>
+                <b>{labelGlobal.CANDIDATE_LABEL}</b>
+                <lightning-record-edit-form object-api-name={objectApiName}>                
+                    <lightning-messages></lightning-messages>
+                    <template for:each={listFieldsCandidate} for:item="field">
+                        <div key={field.nameAPI} id={field.nameAPI} class={classNameSizeCard} data-block-fields-name="candidate">
+                            <lightning-input-field 
+                                field-name={field.nameAPI}
+                                data-name-block="blockInputFieldsCandidate"
+                                onchange={handleChangeFieldCandidate}                        
+                            ></lightning-input-field> 
+                        </div>
+                    </template>
+                </lightning-record-edit-form>
+                <template if:true={listFieldsJobApp.length}>
+                    <hr>
+                    <b>{labelGlobal.JOB_APPLICATION_LABEL}</b>
+                    <lightning-record-edit-form object-api-name={objectApiNameJobApp}>
+                        <lightning-messages></lightning-messages>
+                        <template for:each={listFieldsJobApp} for:item="field">
+                            <div key={field.nameAPI} id={field.nameAPI} class={classNameSizeCard} data-block-fields-name="JobApplication">                            
+                                <lightning-input-field
+                                    field-name={field.nameAPI}
+                                    data-name-block="blockInputFieldsJobApp"
+                                    onchange={handleChangeFieldJobApplication}                            
+                                ></lightning-input-field>
+                            </div>
+                        </template>
+                    </lightning-record-edit-form>
+                </template>
+            </div>
+            <!--footer-->
+            <footer class="slds-modal__footer">
+                <lightning-button
+                    label={labelGlobal.CANCEL_LABEL}
+                    variant="neutral"
+                    onclick={handleCancelModal}
+                ></lightning-button>&nbsp;
+                <lightning-button
+                    label={labelGlobal.SAVE_LABEL}                    
+                    variant="brand"
+                    onclick={handleSaveModal}
+                ></lightning-button>
+            </footer>            
+        </div>
+    </section>
+    <!--background page set gray-->
+    <div class="slds-backdrop slds-backdrop_open"> </div>
+
+</template>

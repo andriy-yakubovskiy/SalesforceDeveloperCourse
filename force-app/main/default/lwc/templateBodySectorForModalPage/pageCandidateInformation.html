@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title={titleTextPage}>
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col" style="text-align: left; width: 80%">
+                <i><b>{candidateValue.name}</b></i>
+                <template for:each={candidateValue.fields} for:item="field">
+                    <div key={field.name}>
+                        <span>{field.lable}: {field.value}</span>
+                    </div>
+                </template>
+            </div>
+            <template if:true={additionallyDataForCandidate.length}>
+                <div class="slds-col"  style="text-align: left; width: 80%">                
+                    <i><b>Candidate's 'job application'</b></i>
+                    <template for:each={additionallyDataForCandidate} for:item="additionallyData">
+                        <template for:each={additionallyData.fields} for:item="field">
+                            <div key={field.name}>
+                                <span>{field.lable}: {field.value}</span>
+                            </div>
+                        </template>
+                    </template>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

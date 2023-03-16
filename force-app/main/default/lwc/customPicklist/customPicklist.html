@@ -1,0 +1,25 @@
+<template>
+    <!--***Variant with combobox component
+    <div class="my-cystom-style-combobox">
+       <lightning-combobox
+            name="picklistTable"
+            label={label}
+            variant={variant}
+            value={value}
+            placeholder={placeholder}
+            options={options}
+            onchange={handleChange}>
+        </lightning-combobox>
+    </div>-->
+    <select class="slds-select my-cystom-style-combobox" onchange={handleChange}>
+        <template for:each={options} for:item="opt">
+            <option
+                key={opt.value}
+                value={opt.value}
+                selected={opt.selected}
+            >
+            {opt.label}
+            </option>
+       </template>
+    </select>
+</template>

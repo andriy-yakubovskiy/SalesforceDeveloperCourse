@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+  <apiVersion>52.0</apiVersion>
+  <isExposed>true</isExposed>
+  <targets>
+    <target>lightning__AppPage</target>
+    <target>lightning__HomePage</target>
+  </targets>
+  <targetConfigs>  
+    <targetConfig targets="lightning__HomePage,lightning__AppPage">
+        <property name="numberOfRecordsInPage" label="Number of records in page (min=1;max=100):" type="Integer" default="3" min="1" max="100"/>
+    </targetConfig>
+</targetConfigs>
+</LightningComponentBundle>
